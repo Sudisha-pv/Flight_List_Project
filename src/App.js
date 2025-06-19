@@ -68,10 +68,14 @@ function App() {
       <div className="container mx-auto flex justify-between items-center px-4 py-3 text-sm">
 
         {/* ✅ Left: Logo or Title */}
-        <div className="flex items-center gap-2">
-          <FaPlaneDeparture className="text-red-600 text-xl" />
-          <h1 className="text-xl font-bold text-red-600">Flight Search</h1>
-        </div>
+       <div className="flex flex-col items-start">
+      <img
+        src="/assets/logo.svg"
+        alt="Book Sultan Logo"
+        className="w-36 h-auto"  // adjust width as needed
+      />
+     
+    </div>
 
         {/* ✅ Right: Navigation Links */}
         <div className="flex items-center space-x-6">
@@ -109,11 +113,18 @@ function App() {
 
 {/* Searchlist */}
   <div className="bg-blue-600 p-4 rounded-md mt-4 text-white space-y-2">
-      <div className="flex space-x-2">
-        <button className="bg-white text-blue-600 px-4 py-1 rounded">One Way</button>
-        <button className="bg-white text-blue-600 px-4 py-1 rounded">Round Trip</button>
-        <button className="bg-white text-blue-600 px-4 py-1 rounded">Multi City</button>
-      </div>
+    <div className="flex space-x-2">
+  <button className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-blue-600 hover:text-white transition">
+    One Way
+  </button>
+  <button className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-blue-600 hover:text-white transition">
+    Round Trip
+  </button>
+  <button className="bg-white text-blue-600 px-4 py-1 rounded hover:bg-blue-600 hover:text-white transition">
+    Multi City
+  </button>
+</div>
+
       <div className="flex flex-wrap gap-2">
         <input className="rounded p-2 text-black flex-1 bg-white" placeholder="From (e.g. Dubai)" />
         <input className="rounded p-2 text-black flex-1 bg-white" placeholder="To (e.g. Kuwait)" />
@@ -122,7 +133,10 @@ function App() {
         <select className="rounded p-2 text-black w-60 bg-white">
           <option>1 Traveller, Economy</option>
         </select>
-        <button className="bg-pink-600 px-6 py-2 rounded text-white">Search</button>
+       <button className="bg-pink-600 hover:bg-pink-700 px-6 py-2 rounded text-white transition">
+  Search
+</button>
+
       </div>
     </div>
 
@@ -154,7 +168,7 @@ function App() {
 
 
 
-
+{/* FkightList and AddFlight Display */}
     <div className="flex gap-4 p-6">
       {/* Filter Sidebar - 30% */}
       <div className="w-[30%]">
